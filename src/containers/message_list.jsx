@@ -21,17 +21,17 @@ class MessageList extends Component {
 	}
 }
 
-function mapStateToProps(state) {
-	return {
-		messages: state.messages
-	};
-}
-
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(
 		{fetchMessages},
 		dispatch
 	);
+}
+
+function mapStateToProps(state) {
+	return {
+		messages: state.messages
+	};
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(MessageList);

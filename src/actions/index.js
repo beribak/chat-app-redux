@@ -5,5 +5,5 @@ export function fetchMessages() {
 	return{
 		type: 'FETCH_MESSAGES',
 		payload: promise
-	}
+	};
 }
