@@ -4,18 +4,20 @@ import { connect } from 'react-redux';
 import { fetchMessages } from '../actions';
 
 import Message from './message';
+import MessageForm from './message_form';
 
 class MessageList extends Component {
 
 	componentWillMount() {
-    	this.props.fetchMessages();
+    	// this.props.fetchMessages();
   	}
 
 	render() {
 
 		return(
 			<div className="message_list">
-				{this.props.messages.messages.map(message => <Message message={message} key={message.content} />)}
+				{this.props.messages.map(message => <Message message={message} key={message.content} />)}
+
 			</div>
 		);
 	}
