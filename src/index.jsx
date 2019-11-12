@@ -14,6 +14,7 @@ import messagesReducer from './reducers/messages_reducer';
 import channelsReducer from './reducers/channels_reducer';
 import usersReducer from './reducers/users_reducer';
 import selectedChannelReducer from './reducers/selected_channel_reducer';
+import inputValueReducer from './reducers/input_value_reducer';
 
 const initialState = {
   messages: [
@@ -31,6 +32,7 @@ const initialState = {
   channels: [ 'general', 'react', 'paris' ],
   // currentUser: prompt("What is your username?") || `anonymous${Math.floor(10 + (Math.random() * 90))}`,
   selectedChannel: 'general'
+  // inputValue: 'hello'
 }; 
 
 // State and reducers
@@ -38,7 +40,8 @@ const reducers = combineReducers({
  messages: messagesReducer,
  channels: channelsReducer,
  currentUser: usersReducer,
- selectedChannel: selectedChannelReducer
+ selectedChannel: selectedChannelReducer,
+ inputValue: inputValueReducer
 });
 
 const middlewares = applyMiddleware(reduxPromise, logger); 

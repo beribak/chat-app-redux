@@ -7,3 +7,11 @@ export function fetchMessages() {
 		payload: state
 	};
 }
+
+export function fetchInput(input) {
+
+	return{
+		type: 'FETCH_INPUT_VALUE',
+		payload: input
+	};
+}
