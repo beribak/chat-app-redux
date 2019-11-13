@@ -8,7 +8,7 @@ class MessageForm extends Component {
 
 	handleChange = (event) => {
    		this.props.fetchInput(event.target.value);
-  		// this.props.createMessage(this.props.inputValue);
+  		this.props.createMessage(this.props.inputValue);
   	}
 
   	handleSubmit = () => {
