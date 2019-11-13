@@ -9,10 +9,14 @@ class MessageForm extends Component {
    		this.props.fetchInput(event.target.value);
   	}
 
+  	handleSubmit = (event) => {
+   		this.props.createMessage(this.props.inputValue);
+  	}
+
 	render() {
 
 		return(
-			<form className="message-form">
+			<form className="message-form" onSubmit={this.handleSubmit}>
 				<input type="text" value={this.props.inputValue} onChange={this.handleChange} />
 				<input type="submit" value="Submit" />
 			</form>
