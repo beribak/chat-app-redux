@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { fetchInput } from '../actions';
+import { createMessage } from '../actions';
 
 class MessageForm extends Component {
 
 	handleChange = (event) => {
    		this.props.fetchInput(event.target.value);
+  		// this.props.createMessage(this.props.inputValue);
   	}
 
-  	handleSubmit = (event) => {
+  	handleSubmit = () => {
    		this.props.createMessage(this.props.inputValue);
   	}
 
@@ -26,7 +28,7 @@ class MessageForm extends Component {
 
 function mapDispatchToProps(dispatch) {
 	return bindActionCreators(
-		{fetchInput},
+		{ fetchInput, createMessage },
 		dispatch
 	);
 }

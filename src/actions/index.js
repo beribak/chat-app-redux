@@ -17,16 +17,16 @@ export function fetchInput(input) {
 }
 
 export function createMessage(message) {
-	const body = {"content": message };
+	// const body = {"content": message };
 
-	const promise = fetch('https://wagon-chat.herokuapp.com/general/messages/{"danko": "sdasd"}', {
-	  method: 'POST',
-	  headers: {
-	    'Accept': 'application/json',
-	    'Content-Type': 'application/json'
-	  },
-	  body: JSON.stringify(body)
-	}).then(r => r.json()); 
+	// const promise = fetch('https://wagon-chat.herokuapp.com/general/messages/{"danko": "sdasd"}', {
+	//   method: 'POST',
+	//   headers: {
+	//     'Accept': 'application/json',
+	//     'Content-Type': 'application/json'
+	//   },
+	//   body: JSON.stringify(body)
+	// }).then(r => r.json()); 
 
 	return{
 		type: 'CREATE_MESSAGE',

@@ -5,6 +5,6 @@ export default function(state = [], action) {
     case  'CREATE_MESSAGE':
     	return action.payload;
     default:
-      return state;
+    	return state;
   }
 }
