@@ -5,7 +5,7 @@ import { fetchInput } from '../actions';
 
 class MessageForm extends Component {
 
-	handleChange(event) {
+	handleChange = (event) => {
    		this.props.fetchInput(event.target.value);
   	}
 
