@@ -3,7 +3,7 @@ export default function(state = [], action) {
     case 'FETCH_MESSAGES':
     	return action.payload;
     case  'CREATE_MESSAGE':
-    	return state.push(action.payload);
+    	return action.payload;
     default:
       return state;
   }
