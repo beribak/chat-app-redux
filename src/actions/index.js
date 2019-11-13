@@ -30,6 +30,6 @@ export function createMessage(message) {
 
 	return{
 		type: 'CREATE_MESSAGE',
-		payload: message
+		payload: [{content: message}]
 	};
 }
