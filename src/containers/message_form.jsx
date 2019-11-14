@@ -8,7 +8,7 @@ class MessageForm extends Component {
 
 	handleChange = (event) => {
    		this.props.fetchInput(event.target.value);
-  		this.props.createMessage(this.props.inputValue);
+  		this.props.createMessage(this.props.inputValue, this.props.messages);
   	}
 
   	handleSubmit = () => {
@@ -36,7 +36,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
 	return {
 		inputValue: state.inputValue,
-		messages: messages
+		messages: state.messages
 	};
 }
 
