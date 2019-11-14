@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchMessages } from '../actions';
+import { fetchMessages } from '../actions'
 
 import Message from './message';
 import MessageForm from './message_form';

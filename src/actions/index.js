@@ -33,6 +33,6 @@ export function createMessage(message, messages) {
 	 arr.push(ob);
 	return{
 		type: 'CREATE_MESSAGE',
-		payload: arr//[{content: message}]
+		payload: arr 
 	};
 }
