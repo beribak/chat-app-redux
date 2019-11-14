@@ -35,7 +35,8 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
 	return {
-		inputValue: state.inputValue
+		inputValue: state.inputValue,
+		messages: messages
 	};
 }
 
